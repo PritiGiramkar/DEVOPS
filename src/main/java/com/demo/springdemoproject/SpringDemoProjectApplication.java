@@ -19,10 +19,10 @@ public class SpringDemoProjectApplication {
 	CommandLineRunner init(UserJPARepository userRepository) {
 		return args -> {
 			Stream.of("John", "Julie", "Jennifer", "Helen", "Rachel").forEach(name -> {
-				Users user = new Users(name,"NGProc",1000);
-//				user.setName(name);
-//				user.setTeamname("NGProc");
-//				user.setSalary(1000);
+				Users user = new Users();
+				user.setName(name);
+				user.setTeamname("NGProc");
+				user.setSalary(1000);
 				userRepository.save(user);
 			});
 			userRepository.findAll().forEach(System.out::println);

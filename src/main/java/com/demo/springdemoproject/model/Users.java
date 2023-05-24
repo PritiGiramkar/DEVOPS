@@ -12,13 +12,6 @@ public class Users {
 	private String teamname;
 	private Integer salary;
 
-	public Users(String name, String teamname, Integer salary) {
-		//this.id=id;
-		this.name=name;
-		this.teamname=teamname;
-		this.salary=salary;
-	}
-
 	@Id	// this is primary key
 	@GeneratedValue(strategy = GenerationType.AUTO)		//it will y default add the id to the value
 	public long getId() {
